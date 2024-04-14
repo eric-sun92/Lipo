@@ -23,9 +23,8 @@ jobs:
 
     - name: Build static site
       run: npm run build  # Add this if you need to build your site
-      working-directory: ./frontend  # Update this to your project's path if needed
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./build s3://lipofuscin.yalepages.org --delete --exclude "*.git*/*"  # Change `./build` to your build directory if different
+      run: aws s3 sync ./lipo s3://lipofuscin.yalepages.org --delete --exclude "*.git*/*"  # Change `./build` to your build directory if different
     - name: Flush Distribution Cache
       run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths '/*'
