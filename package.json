@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@bokeh/bokehjs": "^3.3.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "html2canvas": "^1.4.1",
+    "xlsx": "^0.18.5"
+  }
+}
